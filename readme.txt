@@ -14,7 +14,7 @@ i: First we need to get a few items
 - Grab a charger for the Pi (5V 2A or more with USB-C cable)
 - Grab an mirco SD card of sufficiant speed (Ex. SanDisk Ultra 16GB A1)
 - Grab a keyboard
-- Optionally grab a mouse.
+- Grab a mouse (Only needed during setup, not for using Plex)
 - Grab a monitor or tv
 - Micro HDMI to HDMI (or displayport, depending on the monitor you use)
 - Grab a USB mirco SD card reader (Or a mirco SD to SD adapter and SD card reader for your pc)
