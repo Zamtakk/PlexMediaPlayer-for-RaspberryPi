@@ -121,6 +121,8 @@ i: Now we need to add an autostart entry to automatically start plex and shutdow
 plexmediaplayer
 shutdown -h now
 <<<<
+> sudo chmod 755 ./plex_startup.sh
+
 > mkdir /home/pi/.config/autostart
 > nano /home/pi/.config/autostart/plex.desktop
 >>>>
