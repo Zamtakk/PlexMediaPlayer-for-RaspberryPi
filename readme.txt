@@ -52,6 +52,19 @@ i: Now we have to do a few basic configuration steps.
 - Click next to start updating the software. And wait until it is complete. Then press 'OK'
 - Click restart to apply the new software changes.
 
+++++++++++++++++++++++++++ Optimize the Raspberry Pi ++++++++++++++++++++++++++
+i: This portion of the guide can also be done by a script. If you don't want that, skip the if and do the work manually.
+IF: Use the script
+    IF: Use Single line command
+        > wget -O - https://raw.githubusercontent.com/Zamtakk/PlexMediaPlayer-for-RaspberryPi/main/PlexInstallScript.sh | bash
+    IF: Download and run step by step
+        > wget https://raw.githubusercontent.com/Zamtakk/PlexMediaPlayer-for-RaspberryPi/main/PlexInstallScript.sh
+        > sudo chmod 755 ./PlexInstallScript.sh
+        > sudo ./PlexInstallScript.sh
+    
+    i: Now that you have run the script, you can skip the rest of the chapter and also the next.
+    - Continue in chapter "Configure Plex"
+
 i: Time for some optimizations.
 - Open a terminal with 'Ctrl + Alt + T'
 i: We will now open the Raspberry Pi config to change the GPU memory
