@@ -41,6 +41,7 @@ i: Before powering on the Pi, make sure you have applied a headsink and a stand 
 i: I used 4 10x10x10mm Aluminum Heat Sinks from Aliexpress placed in a 2x2 config on the ARM chip of the pi and a piece of wood with a slit to hold the pi vertically.
 - Power on the Pi with the charger.
 
+++++++++++++++++++++++++++ Configuring the Raspberry Pi ++++++++++++++++++++++++++
 i: Now we have to do a few basic configuration steps.
 - After the Pi is fully booted, click next on the 'Welcome to Raspberry Pi' wizard.
 - Set your Country, Language and Timezone. Optionally use the checkbox below to override your language with english. And click next.
@@ -90,14 +91,18 @@ xserver-command=X -s 0 dpms
 <<<<
 - Save the file with 'Ctrl + O' and exit nano with 'Ctrl + X'
 
+++++++++++++++++++++++++++ Build and install Plex ++++++++++++++++++++++++++
 i: Now it is time to install Plex, for this we need a lot of dependencies because we will build Plex from source code.
 i: You might want to open these instructions on the Pi in the browser. Copy the command and paste it in the terminal with middle click on the mouse.
+
 > sudo apt-get install -y autoconf automake libtool libharfbuzz-dev libfreetype6-dev libfontconfig1-dev libx11-dev libxrandr-dev libvdpau-dev libva-dev mesa-common-dev libegl1-mesa-dev yasm libasound2-dev libpulse-dev libuchardet-dev zlib1g-dev libfribidi-dev git libgnutls28-dev libgl1-mesa-dev libsdl2-dev cmake python3 python python-minimal git mpv libmpv-dev
+
 i: Now we download and install Qt for running plex
 > cd /home/pi
 > wget https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.12.5-1/qt5-opengl-dev_5.12.5_armhf.deb
 > sudo apt-get install -y ./qt5-opengl-dev_5.12.5_armhf.deb
 > rm qt5-opengl-dev_5.12.5_armhf.deb
+
 i: Now we download and build Plex
 > mkdir /home/pi/pmp
 > cd /home/pi/pmp
