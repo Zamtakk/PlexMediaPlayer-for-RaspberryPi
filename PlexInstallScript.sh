@@ -24,15 +24,15 @@ cd /home/pi
 runuser -l pi -c 'wget https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.12.5-1/qt5-opengl-dev_5.12.5_armhf.deb'
 
 echo "Installing QT for Plex"
-runuser -l pi -c 'apt-get install -y ./qt5-opengl-dev_5.12.5_armhf.deb'
+apt-get install -y ./qt5-opengl-dev_5.12.5_armhf.deb
 runuser -l pi -c 'rm qt5-opengl-dev_5.12.5_armhf.deb'
 runuser -l pi -c 'mkdir /home/pi/pmp'
 cd /home/pi/pmp
 echo "Cloning Plex"
-runuser -l pi -c 'git clone git://github.com/plexinc/plex-media-player'
-cd plex-media-player/
+runuser -l pi -c 'git clone git://github.com/plexinc/plex-media-player /home/pi/pmp'
+cd /home/pi/pmp/plex-media-player
 runuser -l pi -c 'mkdir build'
-cd build
+cd /home/pi/pmp/plex-media-player/build
 echo "Building Plex"
 runuser -l pi -c 'cmake -DCMAKE_BUILD_TYPE=Debug -DQTROOT=/usr/lib/qt5.12/ -DCMAKE_INSTALL_PREFIX=/usr/local/ ..'
 runuser -l pi -c 'make -j4'
