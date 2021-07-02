@@ -131,3 +131,37 @@ Type=Application
 Name=Plex
 Exec=/home/pi/plex_startup.sh
 <<<<
+
+++++++++++++++++++++++++++ Configure Plex ++++++++++++++++++++++++++
+- Open a terminal with 'Ctrl + Alt + T'
+i: Now we test if plex works
+> plexmediaplayer
+- Click 'Sign In'
+- On your normal computer or phone go to https://plex.tv/link
+- Enter the code given by Plex Media Player
+i: You are now signed in with your account.
+- If you have multiple servers, select your prefered server. Then continue.
+- Use the arrow keys to deselect all the items you do not want on your homescreen, and click continue.
+- Navigate to your username, press enter, go to settings, press enter.
+- Modify the following settings:
+    - Main > Automatically Sign In > Check
+    - Main > Screen Saver > 1 minute
+    - Main > Fullscreen > Check
+    - Main > Always on Top > Check
+    - Main > Automatic Updates > Un-check
+    - Video > Local Quality > 20 Mbps, 1080p (Or lower if you have slow internet)
+    - Video > Remote Quality > 20 Mbps, 1080p (Or lower if you have slow internet)
+    - Video > Online Quality > 20 Mbps, 1080p (Or lower if you have slow internet)
+    - Video > Hardware Decoding > Enabled
+    - Video > Allow Direct Play > Un-check (I disable this so that the server always transcodes, this is done so the Pi has the easiest job possible.)
+    - Video > Allow Direct Stream > Un-check (I disable this so that the server always transcodes, this is done so the Pi has the easiest job possible.)
+
+- Shutdown plex with 'Alt + F4'
+
+i: To save and get everything working, reboot the pi
+> sudo reboot
+
+++++++++++++++++++++++++++ Using Plex ++++++++++++++++++++++++++
+i: If everything has gone to plan, when the Pi boots it will automatically start Plex.
+i: When you are done watching, use 'Alt + F4' to close Plex and the Pi should automatically shutdown.
+i: After about 10 seconds you can safely disconnect the Pi from power. Then apply power again to boot it when you want to watch again.
