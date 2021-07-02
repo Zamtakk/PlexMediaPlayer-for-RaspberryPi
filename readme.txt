@@ -31,12 +31,13 @@ i: Now we will use the tool to install the RPi OS onto the micro SD card that wi
 - Insert SD card in computer (USB SD reader can be used)
 - Run imager
 - Click 'Choose OS' > Select Raspberry Pi OS 32-bit (Recommended)
-- Select SD Card
+- Click 'Choose SD Card' > Select SD Card
 - Click write
+- Wait for the writing to complete
 
 i: The SD card is now ready!
 - Remove the SD card from the computer and put it in the Raspberry Pi.
-- Connect the monitor, keyboard, (mouse) and ethernet to the Pi.
+- Connect the monitor, keyboard, mouse and ethernet to the Pi.
 i: Before powering on the Pi, make sure you have applied a headsink and a stand or some other proper cooling sollution.
 i: I used 4 10x10x10mm Aluminum Heat Sinks from Aliexpress placed in a 2x2 config on the ARM chip of the pi and a piece of wood with a slit to hold the pi vertically.
 - Power on the Pi with the charger.
@@ -48,7 +49,7 @@ i: Now we have to do a few basic configuration steps.
 - Optionally change the default password (which is 'raspberry'). Proceed with next.
 - Check the box if your screen shows a black border on the edges, and click next.
 - If you use an ethernet cable, you can click 'skip' in the WiFi section. Otherwise select your wifi SSID and insert the password. Continue with next.
-- Click next to start updating the software. And wait until it is complete.
+- Click next to start updating the software. And wait until it is complete. Then press 'OK'
 - Click restart to apply the new software changes.
 
 i: Time for some optimizations.
@@ -71,7 +72,7 @@ over_voltage=6
 arm_freq=2000
 gpu_freq=700
 <<<<
-- Save the file with 'Ctrl + O' and exit nano with 'Ctrl + X'
+- Save the file with 'Ctrl + O' > 'Enter' and exit nano with 'Ctrl + X'
 i: Now we need to reboot.
 > sudo reboot
 
@@ -79,7 +80,7 @@ i: When the device is booted, check that the overclock works.
 - Open a terminal with 'Ctrl + Alt + T'
 i: We will watch the clock speed to verify
 > watch -n 1 vcgencmd measure_clock arm
-i: The clockspeed with probably hover around 600,000,000
+i: The clockspeed will probably hover around 600,000,000
 - Open a browser window and check if the clockspeed spikes up to 2,000,000,000
 - Close the watch command with 'Ctrl + C'
 
@@ -89,7 +90,7 @@ i: Now we need to disable screen timeout because Plex will not be detected and t
 >>>>
 xserver-command=X -s 0 dpms
 <<<<
-- Save the file with 'Ctrl + O' and exit nano with 'Ctrl + X'
+- Save the file with 'Ctrl + O' > 'Enter' and exit nano with 'Ctrl + X'
 
 ++++++++++++++++++++++++++ Build and install Plex ++++++++++++++++++++++++++
 i: Now it is time to install Plex, for this we need a lot of dependencies because we will build Plex from source code.
@@ -121,6 +122,7 @@ i: Now we need to add an autostart entry to automatically start plex and shutdow
 plexmediaplayer
 shutdown -h now
 <<<<
+- Save the file with 'Ctrl + O' > 'Enter' and exit nano with 'Ctrl + X'
 > sudo chmod 755 ./plex_startup.sh
 
 > mkdir /home/pi/.config/autostart
@@ -131,6 +133,7 @@ Type=Application
 Name=Plex
 Exec=/home/pi/plex_startup.sh
 <<<<
+- Save the file with 'Ctrl + O' > 'Enter' and exit nano with 'Ctrl + X'
 
 ++++++++++++++++++++++++++ Configure Plex ++++++++++++++++++++++++++
 - Open a terminal with 'Ctrl + Alt + T'
