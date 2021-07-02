@@ -55,12 +55,9 @@ i: Now we have to do a few basic configuration steps.
 ++++++++++++++++++++++++++ Optimize the Raspberry Pi ++++++++++++++++++++++++++
 i: This portion of the guide can also be done by a script. If you don't want that, skip the if and do the work manually.
 IF: Use the script
-    IF: Use Single line command
-        > wget -O - https://raw.githubusercontent.com/Zamtakk/PlexMediaPlayer-for-RaspberryPi/main/PlexInstallScript.sh | bash
-    IF: Download and run step by step
-        > wget https://raw.githubusercontent.com/Zamtakk/PlexMediaPlayer-for-RaspberryPi/main/PlexInstallScript.sh
-        > sudo chmod 755 ./PlexInstallScript.sh
-        > sudo ./PlexInstallScript.sh
+    > wget https://raw.githubusercontent.com/Zamtakk/PlexMediaPlayer-for-RaspberryPi/main/PlexInstallScript.sh
+    > sudo chmod 755 ./PlexInstallScript.sh
+    > sudo ./PlexInstallScript.sh
     
     i: Now that you have run the script, you can skip the rest of the chapter and also the next.
     - Continue in chapter "Configure Plex"
