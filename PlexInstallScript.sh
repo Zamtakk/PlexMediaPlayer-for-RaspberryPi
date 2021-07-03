@@ -42,17 +42,20 @@ make install -C /home/pi/pmp/plex-media-player/build
 
 echo "Creating automatic startup for Plex"
 runuser -l pi -c 'touch /home/pi/plex_startup.sh'
+chmod 755 /home/pi/plex_startup.sh
 cat > /home/pi/plex_startup.sh << EOF
 plexmediaplayer
 shutdown -h now
 EOF
-chmod 755 /home/pi/plex_startup.sh
 
 runuser -l pi -c 'mkdir /home/pi/.config/autostart'
 runuser -l pi -c 'touch /home/pi/.config/autostart/plex.desktop'
+chmod 755 /home/pi/.config/autostart/plex.desktop
 cat > /home/pi/.config/autostart/plex.desktop << EOF
-plexmediaplayer
-shutdown -h now
+[Desktop Entry]
+Type=Application
+Name=Plex
+Exec=/home/pi/plex_startup.sh
 EOF
 
 echo "Done"
