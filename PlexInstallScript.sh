@@ -30,7 +30,7 @@ runuser -l pi -c 'rm qt5-opengl-dev_5.12.5_armhf.deb'
 
 echo "Cloning Plex"
 runuser -l pi -c 'mkdir /home/pi/pmp'
-runuser -l pi -c 'git clone git://github.com/plexinc/plex-media-player /home/pi/pmp'
+runuser -l pi -c 'git clone git://github.com/plexinc/plex-media-player /home/pi/pmp/plex-media-player'
 
 echo "Building Plex"
 runuser -l pi -c 'mkdir /home/pi/pmp/plex-media-player/build'
