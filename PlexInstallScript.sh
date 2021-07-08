@@ -7,6 +7,10 @@ fi
 echo "Applying overclock"
 sed -i 's/#arm_freq=800/over_voltage=6\narm_freq=2000\ngpu_freq=700/' /boot/config.txt
 
+echo "Reducing screen tearing"
+sed -i 's/max_framebuffers=2/max_framebuffers=1/' /boot/config.txt
+rm /etc/xdg/autostart/xcompmgr.desktop
+
 echo "Increasing GPU memory"
 cat >> /boot/config.txt << EOF
 
