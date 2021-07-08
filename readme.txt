@@ -69,6 +69,8 @@ i: We will now open the Raspberry Pi config to change the GPU memory
 - Navigate to [Performance options] > [GPU Memory]
 - Insert '512' into the input field. NOTE: the numlock will probably be off, check that first.
 - Click [OK]
+- Navigate to [Advanced options] > [A3 Compositor]
+- Click [No] to disable the compositor
 - Click [Finish]
 - Click [Yes] to reboot now
 
@@ -82,6 +84,7 @@ over_voltage=6
 arm_freq=2000
 gpu_freq=700
 <<<<
+- Now modify the max_framebuffers setting to 1 'max_framebuffers=1'
 - Save the file with 'Ctrl + O' > 'Enter' and exit nano with 'Ctrl + X'
 i: Now we need to reboot.
 > sudo reboot
